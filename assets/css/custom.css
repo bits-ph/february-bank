@@ -1,0 +1,100 @@
+@font-face {
+  font-family: Druk Wide;
+  src: url('../fonts/DRUK WIDE BOLD.TTF');
+}
+
+* { color: white; font-family: Arial; }
+body { position: relative; background: black; }
+h1, h2, h3, h4, h5, h6 {
+	font-family: Druk Wide;
+	text-transform: uppercase;
+}
+
+#videoBG video { position: fixed; z-index: -1; }
+#overlay { position: fixed; height: 100%; width: 100%; background: black; opacity: 0.5; }
+@media (min-aspect-ratio: 16/9) { #videoBG video { width: 100%; height: auto; } }
+@media (max-aspect-ratio: 16/9) {
+	#videoBG video { width: auto; height: 100%; }
+}
+
+#container { padding-top: 40px; }
+
+#nav {  }
+#logo--wordmark { width: 120px; margin-bottom: 20px; }
+#nav ul {
+	list-style: none;
+	padding: 0;
+}
+#nav ul > li { margin-bottom: 8px; }
+#nav ul > li > a {
+	font-family: Druk Wide;
+	text-transform: lowercase;
+	font-size: 0.8em;
+	padding: 2px 6px;
+	text-decoration: none !important;
+	color: white !important;
+}
+#nav ul > li > a.green { color: #0de588 !important; }
+#nav ul > li > a.active { background-color: #3526ff; }
+
+#content { padding-top: 40px; padding-bottom: 40px; }
+
+#home {
+	position: relative;
+	height: calc(100vh - ((40px + 40px) + 40px));
+	min-height: calc(600px - ((40px + 40px) + 40px));
+	/*
+	height: 100vh;
+	min-height: calc(800px - 40px);
+	max-height: 800px;
+	*/
+}
+#home * { font-size: 0; }
+#home img { position: absolute; }
+
+#home #logo--monogram {
+	width: 240px;
+	top: calc(50% - (240px / 2));
+	left: calc(50% - (240px / 2));
+}
+
+#home ul { list-style: none; margin: 0; }
+#home ul > li { position: absolute; }
+#home ul > li img { width: 180px; height: 75px; }
+.home-link a div { position: relative; }
+.home-link a .home-link__image--hover { position: absolute; opacity: 0.0; }
+.home-link a:hover .home-link__image--hover { opacity: 1.0; }
+.home-link a:hover .home-link__image--hover ~ .home-link__image { opacity: 0.0; }
+#link--youtube {     top: calc((50% - (75px / 2)) - 200px); left: calc((50% - (180px / 2)) +   0px); }
+#link--spotify {     top: calc((50% - (75px / 2)) - 100px); left: calc((50% - (180px / 2)) + 240px); }
+#link--apple-music { top: calc((50% - (75px / 2)) + 100px); left: calc((50% - (180px / 2)) + 240px); }
+#link--instagram {   top: calc((50% - (75px / 2)) + 200px); left: calc((50% - (180px / 2)) +   0px); }
+#link--twitter {     top: calc((50% - (75px / 2)) + 100px); left: calc((50% - (180px / 2)) - 240px); }
+#link--facebook {    top: calc((50% - (75px / 2)) - 100px); left: calc((50% - (180px / 2)) - 240px); }
+
+
+
+#home .image--floating { width: 160px; height: 160px; }
+#decor--heart {    top: calc((50% - (160px / 2)) - 220px); left: calc((50% - (160px / 2)) - 340px); }
+#decor--icecream { top: calc((50% - (160px / 2)) - 200px); left: calc((50% - (160px / 2)) + 400px); }
+#decor--cloud {    top: calc((50% - (160px / 2)) + 160px); left: calc((50% - (160px / 2)) + 420px); }
+#decor--bandaid {  top: calc((50% - (160px / 2)) + 120px); left: calc((50% - (160px / 2)) - 480px); }
+
+#photo-album .masonry__item { padding-bottom: 30px; }
+#photo-album a img {
+	filter: grayscale(100%);
+	transition: filter 0.2s ease-in-out;
+}
+#photo-album a:hover img {
+	filter: grayscale(0%);
+}
+.masonry__item { transition: none !important; }
+
+#about h1 {
+	font-size: 3.6em;
+	color: blue;
+}
+#about p {
+	margin-left: 30%;
+	text-transform: uppercase;
+}
