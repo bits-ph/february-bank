@@ -30,6 +30,7 @@ else {
 }
 
 $("a[href*='#']").click(function() {
+	 event.preventDefault();
 	sectionId = $(this).attr('href');
 	$section = $sections.filter(sectionId)
 	if ($section.length > 0) {

@@ -17,9 +17,10 @@ h1, h2, h3, h4, h5, h6 {
 	#videoBG video { width: auto; height: 100%; }
 }
 
-#container { padding-top: 40px; }
-
-#nav {  }
+#nav {
+	position: absolute;
+	z-index: 1;
+}
 #logo--wordmark { width: 120px; margin-bottom: 20px; }
 #nav ul {
 	list-style: none;
@@ -39,10 +40,13 @@ h1, h2, h3, h4, h5, h6 {
 
 #content { padding-top: 40px; padding-bottom: 40px; }
 
+.section { margin-left: 140px; }
+.section--centered { margin-left: 0; }
+
 #home {
 	position: relative;
-	height: calc(100vh - ((40px + 40px) + 40px));
-	min-height: calc(600px - ((40px + 40px) + 40px));
+	height: calc(100vh - ((40px + 40px) + (40px + 40px)));
+	min-height: 600px;
 	/*
 	height: 100vh;
 	min-height: calc(800px - 40px);
