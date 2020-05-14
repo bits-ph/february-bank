@@ -11,8 +11,9 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 	text-transform: uppercase;
 }
 
+#videoBG { position: relative; z-index: -1; }
+#overlay { position: fixed; z-index: 0; height: 100%; width: 100%; background: black; opacity: 0.5; }
 #videoBG video { position: fixed; z-index: -1; }
-#overlay { position: fixed; height: 100%; width: 100%; background: black; opacity: 0.5; }
 @media (min-aspect-ratio: 16/9) { #videoBG video { width: 100%; height: auto; } }
 @media (max-aspect-ratio: 16/9) {
 	#videoBG video { width: auto; height: 100%; }
@@ -35,7 +36,7 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 #nav ul > li > a {
 	font-family: Druk Wide;
 	text-transform: lowercase;
-	font-size: 0.8em;
+	font-size: 12.8px;
 	padding: 2px 6px;
 	text-decoration: none !important;
 	color: white;
@@ -57,6 +58,7 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 #content {
 	padding-top: 40px;
 	padding-bottom: 40px;
+	height: calc(100vh - 40px - 120px - 44px - 40px);
 	min-height: 500px;
 }
 
@@ -64,17 +66,11 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 	max-width: 540px;
 	margin-left: auto;
 	margin-right: auto;
+	height: 100%;
 }
 
 #home {
 	position: relative;
-	height: calc(100vh - ((40px + 40px) + (40px + 40px)));
-	min-height: 600px;
-	/*
-	height: 100vh;
-	min-height: calc(800px - 40px);
-	max-height: 800px;
-	*/
 }
 #home * { font-size: 0; }
 #home img { position: absolute; }
@@ -92,7 +88,7 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 	text-transform: lowercase;
 }
 #about h1 {
-	font-size: 3em;
+	font-size: 48px;
 	max-width: calc(100% - 40px);
 	margin-left: auto;
 	margin-right: auto;
@@ -108,9 +104,16 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 }
 #about p {
 	text-transform: uppercase;
-	font-size: 0.72em;
-	line-height: 3em;
+	font-size: 11.52px;
+	line-height: 34.56px;
 }
+#pages div,
+#pages p {
+	display: block;
+}
+#pages .slick-track { display: flex !important; }
+#pages .slick-slide { height: inherit !important; display: flex !important; }
+
 
 #photos { text-align: center; margin-bottom: 20px; }
 #photos .slick-track { display: flex !important; }
@@ -151,7 +154,7 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 	padding-top: calc(300px * 0.16);
 	padding-bottom: calc(300px * 0.16);
 	text-transform: uppercase;
-	font-size: 0.36em;
+	font-size: 9px;
 }
 
 .controls {
