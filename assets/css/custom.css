@@ -125,7 +125,7 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 #music .row--custom { display: flex; }
 #music .row--custom > div { height: inherit !important; display: flex !important; justify-content: center; align-items: center; }
 #music .row--custom > div:first-child { flex: 0 0 240px; }
-#music .row--custom > div:last-child { flex: 1; padding-left: 20px; }
+#music .row--custom > div:last-child { flex: 1; padding-left: 60px; }
 #spotify-player-container {
 	width: calc(300px * 0.8);
 	height: calc(80px * 0.8);
@@ -147,10 +147,13 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 	padding-top: calc(300px * 0.16);
 	padding-bottom: calc(300px * 0.16);
 	text-transform: uppercase;
-	font-size: 0.72em;
+	font-size: 0.36em;
 }
 
-.controls { text-align: center; }
+.controls {
+	text-align: center;
+	letter-spacing: 16px;
+}
 .control img {
 	width: 32px;
 	height: 24px;
