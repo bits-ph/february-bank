@@ -5,7 +5,8 @@
 
 * { color: white; font-family: Arial; }
 body { position: relative; background: black; }
-h1, h2, h3, h4, h5, h6 {
+h1,   h2,   h3,   h4,   h5,   h6,
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 	font-family: Druk Wide;
 	text-transform: uppercase;
 }
@@ -17,31 +18,49 @@ h1, h2, h3, h4, h5, h6 {
 	#videoBG video { width: auto; height: 100%; }
 }
 
-#nav {
-	position: absolute;
-	z-index: 1;
-}
-#logo--wordmark { width: 120px; margin-bottom: 20px; }
+#nav { text-align: center; }
+#logo--monogram { width: 48px; margin-bottom: 20px; }
 #nav ul {
 	list-style: none;
 	padding: 0;
 }
-#nav ul > li { margin-bottom: 8px; }
+#nav ul > li {
+	display: inline;
+	margin-right: 28px;
+}
+#nav ul > li:last-child {
+	display: inline;
+	margin-right: 0;
+}
 #nav ul > li > a {
 	font-family: Druk Wide;
 	text-transform: lowercase;
 	font-size: 0.8em;
 	padding: 2px 6px;
 	text-decoration: none !important;
-	color: white !important;
+	color: white;
 }
-#nav ul > li > a.green { color: #0de588 !important; }
-#nav ul > li > a.active { background-color: #3526ff; }
+#nav ul > li > a.active { color: black; background-color: white; }
+#link--new {
+	display: inline-block;
+	overflow: hidden;
+	height: 20px;
+	vertical-align: middle;
+	width: 86px;
+}
+#link--new img {
+	height: 54px;
+	margin-top:  calc((-1 * ((54px  - 20px) / 2)) - 2px);
+	margin-left: calc( -1 * ((115px - 86px) / 2));
+}
 
 #content { padding-top: 40px; padding-bottom: 40px; }
 
-.section { margin-left: 140px; }
-.section--centered { margin-left: 0; }
+.section {
+	max-width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 #home {
 	position: relative;
@@ -56,49 +75,101 @@ h1, h2, h3, h4, h5, h6 {
 #home * { font-size: 0; }
 #home img { position: absolute; }
 
-#home #logo--monogram {
-	width: 240px;
-	top: calc(50% - (240px / 2));
-	left: calc(50% - (240px / 2));
+#logo--wordmark {
+	width: 280px;
+	top: calc(50% - (280px / 2));
+	left: calc(50% - (280px / 2));
 }
 
-#home ul { list-style: none; margin: 0; }
-#home ul > li { position: absolute; }
-#home ul > li img { width: 180px; height: 75px; }
-.home-link a div { position: relative; }
-.home-link a .home-link__image--hover { position: absolute; opacity: 0.0; }
-.home-link a:hover .home-link__image--hover { opacity: 1.0; }
-.home-link a:hover .home-link__image--hover ~ .home-link__image { opacity: 0.0; }
-#link--youtube {     top: calc((50% - (75px / 2)) - 200px); left: calc((50% - (180px / 2)) +   0px); }
-#link--spotify {     top: calc((50% - (75px / 2)) - 100px); left: calc((50% - (180px / 2)) + 240px); }
-#link--apple-music { top: calc((50% - (75px / 2)) + 100px); left: calc((50% - (180px / 2)) + 240px); }
-#link--instagram {   top: calc((50% - (75px / 2)) + 200px); left: calc((50% - (180px / 2)) +   0px); }
-#link--twitter {     top: calc((50% - (75px / 2)) + 100px); left: calc((50% - (180px / 2)) - 240px); }
-#link--facebook {    top: calc((50% - (75px / 2)) - 100px); left: calc((50% - (180px / 2)) - 240px); }
+#about {}
 
-
-
-#home .image--floating { width: 160px; height: 160px; }
-#decor--heart {    top: calc((50% - (160px / 2)) - 220px); left: calc((50% - (160px / 2)) - 340px); }
-#decor--icecream { top: calc((50% - (160px / 2)) - 200px); left: calc((50% - (160px / 2)) + 400px); }
-#decor--cloud {    top: calc((50% - (160px / 2)) + 160px); left: calc((50% - (160px / 2)) + 420px); }
-#decor--bandaid {  top: calc((50% - (160px / 2)) + 120px); left: calc((50% - (160px / 2)) - 480px); }
-
-#photo-album .masonry__item { padding-bottom: 30px; }
-#photo-album a img {
-	filter: grayscale(100%);
-	transition: filter 0.2s ease-in-out;
+#about h1,
+#about h1 * {
+	text-transform: lowercase;
 }
-#photo-album a:hover img {
-	filter: grayscale(0%);
-}
-.masonry__item { transition: none !important; }
-
 #about h1 {
-	font-size: 3.6em;
-	color: blue;
+	font-size: 3em;
+	max-width: calc(100% - 40px);
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+}
+#about h1 span {
+	background: -webkit-linear-gradient(right, #9685fd, #d65cfb);
+	background: -o-linear-gradient(right, #9685fd, #d65cfb);
+	background: -moz-linear-gradient(right, #9685fd, #d65cfb);
+	background: linear-gradient(to right, #9685fd, #d65cfb); 
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 #about p {
-	margin-left: 30%;
 	text-transform: uppercase;
+	font-size: 0.72em;
+	line-height: 3em;
 }
+
+#photos { text-align: center; margin-bottom: 20px; }
+#photos .slick-track { display: flex !important; }
+#photos .slick-slide { height: inherit !important; display: flex !important; justify-content: center; align-items: center; }
+
+#photos a img {
+	filter: grayscale(100%);
+	transition: filter 0.2s ease-in-out;
+	max-width: 300px;
+	max-height: 300px;
+}
+#photos a:hover img {
+	filter: grayscale(0%);
+}
+
+#music .row--custom { display: flex; }
+#music .row--custom > div { height: inherit !important; display: flex !important; justify-content: center; align-items: center; }
+#music .row--custom > div:first-child { flex: 0 0 240px; }
+#music .row--custom > div:last-child { flex: 1; padding-left: 20px; }
+#spotify-player-container {
+	width: calc(300px * 0.8);
+	height: calc(80px * 0.8);
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+#spotify-player {
+	transform: scale(0.8);
+	margin-left: calc(-1 * ((300px * 0.2) / 2));
+	margin-top: calc(-1 * ((80px * 0.2) / 2));
+}
+#lyrics-container {
+	height: 300px;
+	overflow-y: auto;
+	-webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 16%, rgba(0, 0, 0, 1) 84%, rgba(0, 0, 0, 0));
+	mask-image:         linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 16%, rgba(0, 0, 0, 1) 84%, rgba(0, 0, 0, 0));
+}
+#lyrics {
+	padding-top: calc(300px * 0.16);
+	padding-bottom: calc(300px * 0.16);
+	text-transform: uppercase;
+	font-size: 0.72em;
+}
+
+.controls { text-align: center; }
+.control img {
+	width: 32px;
+	height: 24px;
+	filter: invert();
+}
+.control-prev img {
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}
+.control--disabled {
+	opacity: 0.2;
+}
+
+#footer { text-align: center; }
+#footer ul { list-style: none; margin: 0; padding: 0; }
+#footer ul > li { display: inline-block; }
+#footer ul > li img { width: 44px; height: 44px; }

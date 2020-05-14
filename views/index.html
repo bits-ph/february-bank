@@ -2,11 +2,11 @@
 	<head>
 		<title>February Bank</title>
 		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 		<link href="../assets/css/custom.css" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	</head>
 	<body>
 		<div id="videoBG">
@@ -18,145 +18,542 @@
 
 		<div style="padding: 40px;">
 
-			<nav id="nav" style="position: absolute;">
-				<a href="#home"><img src="../assets/media/image__logo--wordmark.png" id="logo--wordmark"></a>
-				<ul>
-					<li><a href="#about" class="js-section-link">About Me</a></li>
-					<li><a href="#photo-album" class="js-section-link">Photo Album</a></li>
-					<li><a href="#music" class="js-section-link">Music // Lyrics</a></li>
-					<li><a href="#contact" class="js-section-link">Contact</a></li>
-					<li><a href="#new" class="js-section-link green">New Shit</a></li>
-				</ul>
-			</nav>
-
 			<div class="container">
 				<div class="row">
 
-					<div id="content" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<section id="home" class="js-section section section--centered d-none">
-							<h1 style="display: none;">February Bank</h1>
-							<img src="../assets/media/image__logo--monogram.png" id="logo--monogram">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<nav id="nav">
+							<a href="#home"><img src="../assets/media/image__logo--monogram.png" id="logo--monogram"></a>
 							<ul>
-								<li id="link--youtube" class="home-link"><a>
-									<div>
-										<!--img src="../assets/media/image__placeholder--16x9-variant.jpg" class="home-link__image--hover"-->
-										<img src="../assets/media/links/static/image__link--youtube.png" class="home-link__image">
-									</div>
-								</a></li>
-								<li id="link--spotify" class="home-link"><a>
-									<div>
-										<!--img src="../assets/media/image__placeholder--16x9-variant.jpg" class="home-link__image--hover"-->
-										<img src="../assets/media/links/static/image__link--spotify.png" class="home-link__image">
-									</div>
-								</li>
-								<li id="link--apple-music" class="home-link"><a>
-									<div>
-										<!--img src="../assets/media/image__placeholder--16x9-variant.jpg" class="home-link__image--hover"-->
-										<img src="../assets/media/links/static/image__link--apple-music.png" class="home-link__image">
-									</div>
-								</a></li>
-								<li id="link--instagram" class="home-link"><a>
-									<div>
-										<!--img src="../assets/media/image__placeholder--16x9-variant.jpg" class="home-link__image--hover"-->
-										<img src="../assets/media/links/static/image__link--instagram.png" class="home-link__image">
-									</div>
-								</a></li>
-								<li id="link--twitter" class="home-link"><a>
-									<div>
-										<!--img src="../assets/media/image__placeholder--16x9-variant.jpg" class="home-link__image--hover"-->
-										<img src="../assets/media/links/static/image__link--twitter.png" class="home-link__image">
-									</div>
-								</a></li>
-								<li id="link--facebook" class="home-link"><a>
-									<div>
-										<!--img src="../assets/media/image__placeholder--16x9-variant.jpg" class="home-link__image--hover"-->
-										<img src="../assets/media/links/static/image__link--facebook.png" class="home-link__image">
+								<li><a href="#about" class="js-section-link">About Me</a></li>
+								<li><a href="#gallery" class="js-section-link">Gallery</a></li>
+								<li><a href="#music" class="js-section-link">Music + Lyrics</a></li>
+								<li><a href="#contact" class="js-section-link">Contact</a></li>
+								<li><a href="#new" class="js-section-link">
+									<span class="d-none">New Shit</span>
+									<div id="link--new">
+										<img src="../assets/media/NEWSHT-[coral].gif">
 									</div>
 								</a></li>
 							</ul>
-							<img src="../assets/media/patches/image__patch--heart.png" id="decor--heart" class="image--floating">
-							<img src="../assets/media/patches/image__patch--ice-cream.png" id="decor--icecream" class="image--floating">
-							<img src="../assets/media/patches/image__patch--cloud.png" id="decor--cloud" class="image--floating">
-							<img src="../assets/media/patches/image__patch--bandaid.png" id="decor--bandaid" class="image--floating">
+						</nav>
+					</div>
+
+					<div id="content" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<section id="home" class="js-section section d-none">
+							<h1 style="display: none;">February Bank</h1>
+							<img src="../assets/media/image__logo--wordmark.png" id="logo--wordmark">
 						</section>
 
-						<section id="photo-album" class="js-section section d-none">
+						<section id="gallery" class="js-section section d-none">
 							<h1 style="display: none;">Photo Album</h1>
-							<div class="js-masonry masonry"><div class="js-masonry-sizer col-xs-3 col-lg-3"></div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/1.jpg" class="img-fluid"></a>
+							<div id="photos">
+								<div><a><img src="../assets/media/photo_album/1.jpg"  class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/2.jpg"  class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/3.jpg"  class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/4.jpg"  class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/5.jpg"  class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/6.jpg"  class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/7.jpg"  class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/8.jpg"  class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/9.jpg"  class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/10.jpg" class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/11.jpg" class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/12.jpg" class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/13.jpg" class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/14.jpg" class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/15.jpg" class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/16.jpg" class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/17.jpg" class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/18.jpg" class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/19.jpg" class="img-fluid"></a></div>
+								<div><a><img src="../assets/media/photo_album/20.jpg" class="img-fluid"></a></div>
+							</div>
+							<div class="controls js-slick-controls" data-ref="photos">
+								<a class="js-control-prev control control-prev control--disabled"><img src="../assets/media/NEXT SYMBOL.png"></a>
+								<a class="js-control-next control control-next"><img src="../assets/media/NEXT SYMBOL.png"></a>
+							</div>
+						</section>
+
+						<section id="music" class="js-section section d-none">
+							<ol id="playlist" class="d-none">
+								<li data-src="https://open.spotify.com/embed/track/5pegykmxTpt3X4JgQDqRBZ">
+									<p>
+										stay inside your house i get it<br/>
+										no one in the street like a ghost town<br/>
+										we dabbing with our feet i get it<br/>
+										now it’s hard to sleep when i’m home now<br/>
+										i’m struggling to eat i get it<br/>
+										nobody is working through the lockdown<br/>
+										i don’t know how to be forget it<br/>
+										i might as well be hidden in the background<br/>
+										this is a fact now<br/>
+										wanna act out<br/>
+										wanna go out<br/>
+										before you pass out<br/>
+										i’ll take the same route<br/>
+										you wanna lay out<br/>
+										so what you say now<br/>
+										the building took the shade out<br/>
+										the rona took the shame out<br/>
+										we are the same now<br/>
+										without a payout<br/>
+										it’s only take-out<br/>
+										nowhere to sit down<br/>
+										it’s always sold out<br/>
+										mask your face out<br/>
+										just let it phase out<br/>
+										no need to hangout<br/>
+										you dirty playground<br/>
+										the plague will make you lay down<br/>
+										don’t kiss and make out<br/>
+										hey now, we better slow down<br/>
+										i got a fold-out<br/>
+										let’s keep it proper like a pronoun<br/>
+										go charge your phone now<br/>
+										i extend a handout<br/>
+										cause my house is your house<br/>
+										that’s what i’m talking about<br/>
+										i know you feeling me out<br/>
+										i won’t be fucking around<br/>
+										if you is having your doubts<br/>
+										won’t let the feeling fade out<br/>
+										you know i’m with you throughout<br/>
+										i’m with you<br/>
+										we all got our own issues<br/>
+										<br/>
+										V-I-R-U-S where are you? who are you?<br/>
+										V-I-R-U-S where are you? who are you?<br/>
+										I-V-R-U-S where are you? who are you?<br/>
+										R-S-V-I-U where are you? who are you?<br/>
+										<br/>
+										better use your time cause can you can<br/>
+										(x8)<br/>
+										<br/>
+										i finally made a song so i can say this<br/>
+										we gonna blackout if we don’t make these simple changes<br/>
+										what’s a virus if it’s painless<br/>
+										our current life it is the strangest<br/>
+										what if life is what you make it<br/>
+										and if you fight then you can save it<br/>
+										i don’t like this isolation<br/>
+										fucking hate the situation<br/>
+										use my mind as education<br/>
+										but i fall into temptation<br/>
+										if i don’t rap it’s like starvation<br/>
+										<br/>
+										V-I-R-U-S where are you?<br/>
+									</p>
+								</li>
+								<li data-src="https://open.spotify.com/embed/track/02lU0Hj680zVexT4GqJJZ4">
+									<p>
+										go figure i’ve gone missing<br/>
+										i got your message but i’ve been distant<br/>
+										i hope you listening clearly to my intention<br/>
+										i got a new speech<br/>
+										i’m feeling very different<br/>
+										my hibernation is like a reinvention<br/>
+										don’t mean i hate you bruh<br/>
+										don’t mean i hate them<br/>
+										don’t understand coo<br/>
+										well, for me i make sense<br/>
+										sorry for lost time homie<br/>
+										you need me just say when<br/>
+										listen<br/>
+										no flex, no chains on<br/>
+										i just sold it at the shop for less than half of what i paid for<br/>
+										i’m sitting here on top with my pockets empty no peso<br/>
+										it’s only a facade i’m too cocky i need to lay low<br/>
+										life is a game show<br/>
+										happy and painful<br/>
+										well how the saying go<br/>
+										no rain no rainbow<br/>
+										finally running from my demons<br/>
+										trying to catch up to my angels<br/>
+										got me staring in the mirror<br/>
+										kinda looking like some weights off<br/>
+										i’m a dog i got to bite raw<br/>
+										i’m not afraid i’m insightful<br/>
+										i get triggered like a tightrope<br/>
+										i stay balanced with a blindfold<br/>
+										i can handle playing iso<br/>
+										been a champion with a title<br/>
+										still aint never made it viral<br/>
+										even if im kinda psycho<br/>
+										rarely see me with a typo<br/>
+										i stay organized like daiso<br/>
+										dreamt of paris and the eiffel<br/>
+										played the piano at recitals<br/>
+										got a record like it’s vinyl<br/>
+										i’m bay area like heiro<br/>
+										i stay dancing like i’m michael<br/>
+										no more warriors in the finals<br/>
+										no more chorus break the cycle<br/>
+										be the taurus good disciple<br/>
+										use thesaurus like a bible<br/>
+										now your words are not recycled<br/>
+										when you spit it’s homicidal<br/>
+										people waiting your arrival<br/>
+										please be cautious as the night goes<br/>
+										just be careful and be mindful<br/>
+										some are friends and some are rivals<br/>
+										some are tropa some are tribal<br/>
+										don’t get sleepy or be idle<br/>
+										in your car or motorcycle<br/>
+										i don’t want you suicidal<br/>
+										if you end it here it’s final<br/>
+										why you living in denial<br/>
+										you defensive you entitled<br/>
+										bitch you spiteful<br/>
+										now you spiral<br/>
+										you just break the rules like i do<br/>
+										(beep)<br/>
+										i’m from the westcoast like death row<br/>
+										i miss cruising down the street like i test drove<br/>
+										you fucking with the best bro<br/>
+										woo woo muhhhhfuckah<br/>
+										that’s my hello<br/>
+										shit, not some gangster art deco<br/>
+										i’m moreno brown not that made in china yellow<br/>
+										i’m a lumpia not an eggroll and i’m so smooth caramelo<br/>
+										i got tattoos on the neck tho<br/>
+										i’m dancing like i’m usher even if it sound electro cause I’m cooler than an eskimo<br/>
+									</p>
+								</li>
+								<li data-src="https://open.spotify.com/embed/track/402Ecma69MRxeQK6ml6YbI">
+									<p>
+										back again i put my foot down on the gas again<br/>
+										you recognize my face but now the name it doesn’t factor in<br/>
+										i’m february bank rest in peace four letter acronym<br/>
+										i’m the last man standing here with a fat stack so blasphemous<br/>
+										you know what’s happening it’s the rebirth of a young catholic<br/>
+										these days i’m very passionate got the light to the keep my candle lit<br/>
+										middle finger in the air dangerous hold up let me angle it<br/>
+										aint smoking all that cannabis cause my brain can’t fucking handle it<br/>
+										i be a truth speaker a cool teacher raised by a good mother she a true diva go tita<br/>
+										i’m too sick but got no fever spitting bars in the back seat of a four seater really for no reason<br/>
+										gangster with the talk i’m flaming hot you yelling go cheetah<br/>
+										bouncing when i walk i’m like a bboy holding loudspeaker<br/>
+										now they want to pay me for a teaser and a short feature<br/>
+										quote me if you need to get that info for your nosy reader<br/>
+										you want the drama gimme commas so i can get a breather<br/>
+										leaving for the beach to do some reading while my tan get even<br/>
+										i drink the buko from the tree not from the freezer<br/>
+										fresh bibinka yea that’s how i’m living when i’m filipino<br/>
+										we working hard so masipag gimme dirty t-shirt<br/>
+										we eating eggs with garlic rice and vegan longanisa<br/>
+										i like velveeta and stuffed crust on my pizza<br/>
+										a wetter cappucino spicy hummus on my pita<br/>
+										i be bleeding out the speaker jazzy like it’s moneychiba<br/>
+										i see a ballerina tippy toeing in the older theatre<br/>
+										she got the soul like aretha holds the keys alicia<br/>
+										her love is sweeter than a dessert yummy justin beiber<br/>
+										i wanna eat pray love all up in indonesia<br/>
+										trapping in october out in tokyo with an extra suica<br/>
+										for every good and evil shout out my asian people<br/>
+										to ying or yang you need write the sequel<br/>
+										and if it’s permanent it’s lethal if it’s wrong it’s not illegal<br/>
+										see a tattoo only stains if you put ink inside the needle<br/>
+										we immortal when we equal i’m impressed with just a little<br/>
+										no depression it’s so peaceful it’s like nobody believe you<br/>
+										know my heart was never evil throw a peace sign i can see you<br/>
+										got me kneeling in cathedrals with the art like memorabilia<br/>
+										flying higher than an eagle out the park like derick jeter<br/>
+										always calculating numbers like im living in casinos<br/>
+										<br/>
+										see my mind it goes in circles as im thinking bout this ballerina...<br/>
+										see my mind it goes in circles as im thinking bout this ballerina...<br/>
+										see my mind it goes in circles as im thinking bout this ballerina...<br/>
+										see my mind it goes in circles as im thinking bout this ballerina...<br/>
+									</p>
+								</li>
+								<li data-src="https://open.spotify.com/embed/track/6lMPUipRF49L8AxLW3F40B">
+									<p>
+										on some real shit i’m onto week three<br/>
+										feel the ten am breeze done with the gym and my pre<br/>
+										i’m free to follow my dreams father it aint what it seems<br/>
+										sometimes it’s hard to believe i feel i’m farther than peaks<br/>
+										like wearing army fatigues i’m even harder to see<br/>
+										i try to practice my preach maybe you are what you seek<br/>
+										a starving artist indeed i be imagining things<br/>
+										and when you working for cheap your worth will slowly increase<br/>
+										go buy your parents a feast make sure the salad is greek<br/>
+										i know the cow need to bleed that’s why the red on the meat<br/>
+										no counting calories please<br/>
+										it’s kinda funny to me<br/>
+										i’m probably thinking to deep why the spaghetti so sweet<br/>
+										it’s hella bothering me<br/>
+										i think in order to breathe we need a family tree<br/>
+										not talking adam and eve i need a valid receipt<br/>
+										and if my energy weak i’ll find the courage to speak<br/>
+										i need some loving today just like the birds and the bees<br/>
+										i need a kiss on the cheek cause i aint feeling at ease<br/>
+										our world is crying for memes cause kobe bryant deceased<br/>
+										and now we fear a disease so we can blame the chinese<br/>
+										look in the mirror so vain i call it freedom of speech<br/>
+										make sure you have a good week pg be sending me beats<br/>
+										i seen the size of the world that’s why i moved overseas<br/>
+										i like the weather it’s nice it’s always hotter than tea<br/>
+										with cheaper food i can eat like oily chicken or beef<br/>
+										so many people outside it’s like you never get peace<br/>
+										and if you feel incomplete there’s always sand on the beach<br/>
+										you could be a living life that you will never repeat<br/>
+										you want a city retreat i know some airbnbs<br/>
+										some with the craziest views some shit you might never see<br/>
+										i swear i’m telling the truth that’s why im planting the seeds<br/>
+										you make five hunnid a day that shit so humbling to me<br/>
+										it’s like you’ll never escape your life will never delete<br/>
+										you seem to work everyday but still aint never succeed<br/>
+										i see you losing your mind brother i don’t disagree<br/>
+										i share the things that i see i’m spitting game for the streets<br/>
+										just seeing shakras in me i like the blue and the green<br/>
+										you try to shit on my name but you aint being discreet<br/>
+										oh yeah i’m living with pain but i can stand on my feet<br/>
+										you muhhhfuckahs the same go get a college degree<br/>
+										i’m all about energy go head and take some from me<br/>
+										<br/>										
+										this is a little call out<br/>
+										this is a little call out<br/>
+										this is a little call out<br/>
+										this is a little call out<br/>
+										ok<br/>
+										this is a little call out<br/>
+										this is a little call out<br/>
+										this is a little call out<br/>
+										this is a little call out   is it real son is it really real?<br/>
+										this is real son this is really real<br/>
+										is it real son is it really real?<br/>
+										this is real son this is really real<br/>
+										<br/>										
+										well, if I only rap in english and not tagalog<br/>
+										how will my people understand what i’m about though<br/>
+										i got the blood of bonifacio<br/>
+										mukha akong gago<br/>
+										mayabang si chris<br/>
+										hindi marunong mag tagalog <br/>
+									</p>
+								</li>
+								<li data-src="https://open.spotify.com/embed/track/1wQsTZ4AxGoXB9FmD9Nf4o">
+									<p>
+										just touchdown start the vacation<br/>
+										mommy and daddy in town they came from las vegas<br/>
+										yo when the soulmates around it’s really contagious<br/>
+										i’m feeling love all around and now i’m making changes<br/>
+										they in my space but i’m feeling spacious<br/>
+										i’m showing face but i aint never racist<br/>
+										not going out so i aint getting faded<br/>
+										so undisputed uncle skip bayless<br/>
+										i’m flying high i call it parasailing<br/>
+										i’m always thinking of these clever phrases<br/>
+										notice my greatness now it’s march and me so motivated<br/>
+										i’m writing pages on a daily basis<br/>
+										i’m low on water lemme call the waitress<br/>
+										it’s kinda boujie i don’t like the jager<br/>
+										i mix and match and still be looking basic<br/>
+										if you want style i go and flip the laces<br/>
+										i’ll make you smile like you was wearing braces<br/>
+										forever young that what they gifted asians<br/>
+										with good complexion like they worked with lasers<br/>
+										i was a hater in the booth appreciate your patience<br/>
+										yo i aint perfect i’m a simulation<br/>
+										i like the booty with some variations<br/>
+										i want the cutie not the dominatrix<br/>
+										i’m loving life with little complications<br/>
+										i say it deeper with a proper cadence<br/>
+										i hope we cooler than refrigerators<br/>
+										and if you love her you already made it<br/>
+										on this occasion let me picture frame it<br/>
+										my mic is hot i need some ventilation<br/>
+										i will not stop for this is entertainment<br/>
+										you think i rap but i’m an entertainer<br/>
+										i’m paid to talk like any commentator<br/>
+										i paint the picture with my words just like an illustrator<br/>
+										i even train just like a gladiator<br/>
+										i got my gains do me a favor you should love thy neighbor<br/>
+										i told my guards i got you food for later<br/>
+										i got some answers like an operator<br/>
+										you got some change i’ll be your calculator<br/>
+										above the rim just like a regulator<br/>
+										i’m spitting flames find me a candlemaker<br/>
+										i know my cookies like a chubby baker<br/>
+										i know atlanta cause of elevators<br/>
+										i know the 80’s like anita baker<br/>
+										i been in oakland but i’m not a raider<br/>
+										i was raver with the ill behavior<br/>
+										i got some vans but i am not a skater<br/>
+										<br/>									
+										no smoke if no pipe <br/>
+										no whip then no ride <br/>
+										no slip if no slide  <br/>
+										no trip if no trike <br/>
+										no gift if no light <br/>
+										no scared if no fright <br/>
+										no smile if no rice <br/>
+										no vans if no skates...<br/>
+									</p>
+								</li>
+								<li data-src="https://open.spotify.com/embed/track/4nOi9YbtFt7e9I4bbI1FKd">
+									<p>
+										not sure if you noticed but i’m spitting bars<br/>
+										i’m rolling and devoted i’m so silly gosh<br/>
+										i’m counting all these stars but i’m the superstar<br/>
+										i’m glowing in the dark just like an avatar<br/>
+										and soon it will be april on the calendar<br/>
+										my album kinda fancy call it caviar<br/>
+										you’ll never hear a hook you fucking amateur<br/>
+										you asking what i said during my seminar<br/>
+										i’m always in a grab it’s like a rent-a-car<br/>
+										i really need to pee i drank a reservoir<br/>
+										i wish i had a bike with sturdy handlebars<br/>
+										the traffic hella bad and i live hella far<br/>
+										i wish i had a bodyguard<br/>
+										cocaine it makes me party hard<br/>
+										you call me pablo escobar<br/>
+										i know i’m short like kevin hart<br/>
+										got karma from the candy bar<br/>
+										excuse me it’s a smelly fart<br/>
+										why you laughing with that hardy har<br/>
+										i be sampling from s&r<br/>
+										the microwave is very smart<br/>
+										don’t question who you really are<br/>
+										if you close but there is no cigar<br/>
+										you dumb then we can go to war<br/>
+										i can shake you for a hundred yards<br/>
+										top to bottom full of body art<br/>
+										i’m looking like a comic card<br/>
+										i be staring at her from afar<br/>
+										maybe kiss her out in central park<br/>
+										be better than i was before<br/>
+										i’m snoring with your metaphors<br/>
+										your lyrics should be never forced<br/>
+										i rap because it’s from the heart<br/>
+										all i need is just a little spark<br/>
+										maybe you can be my lucky charm<br/>
+										already got a running start<br/>
+										all you rappers check my repertoire<br/>
+										i’m slowly gonna climb the charts<br/>
+										i wont forget my powerbar<br/>
+										got christopher my counterpart<br/>
+										we always argue back and forth<br/>
+										the philippines is so bizarre<br/>
+										a bunch of people cheat and there is no divorce<br/>
+										i’m at a sari-sari store<br/>
+										it’s never open twenty four<br/>
+										got everything you looking for<br/>
+										the soda is forever warm<br/>
+										and a milo is a dinosaur<br/>
+										most of y’all are so baduy<br/>
+										only knowing jak and poi<br/>
+										the homies wanna play pusoy<br/>
+										i’m sorry little mamas boy<br/>
+										the car is with your tito boy<br/>
+										you super spoiled and so annoyed<br/>
+										learn to wash your dishes in the kitchen with the yellow joy<br/>
+										you probably need a job so you can be employed<br/>
+										work at mcdonalds boy<br/>
+										<br/>										
+										hmm see...<br/>
+										<br/>
+										fuck you bitch can you do this<br/>
+										my inner demon ruthless<br/>
+										i just say it in the booth bitch<br/>
+										bingo bango where the cat go<br/>
+										be chilling up in mango<br/>
+										where i made this fucking album<br/>
+										i switch up the topic<br/>
+										i get toxic when i talk shit<br/>
+										show manila who the prophet<br/>
+										thousand pesos my pocket<br/>
+										i electrocute the socket<br/>
+										hip-hop is how I rock it<br/>
+										if you don’t like me don’t fuck with me<br/>
+										i don’t like you and your fuckery<br/>
+										i’m a dick and you can suck on me<br/>
+										i don’t need your company<br/>
+										your shoes don’t match your dungarees<br/>
+										i think you fucking comedy<br/>
+										<br/>
+										bola-bola<br/>
+										with misua and patola<br/>
+										bola-bola<br/>
+										i got it from my lola<br/>
+									</p>
+								</li>
+							</ol>
+							<div class="row--custom">
+								<div>
+									<div>
+										<div id="spotify-player-container">
+											<iframe id="spotify-player" src="" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+										</div>
+										<div class="controls js-music-controls" data-ref="pages">
+											<a class="js-control-prev control control-prev control--disabled"><img src="../assets/media/NEXT SYMBOL.png"></a>
+											<a class="js-control-next control control-next"><img src="../assets/media/NEXT SYMBOL.png"></a>
+										</div>
+									</div>
 								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/2.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/3.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/4.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/5.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/6.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/7.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/8.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/9.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/10.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/11.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/12.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/13.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/14.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/15.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/16.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/17.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/18.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/19.jpg" class="img-fluid"></a>
-								</div>
-								<div class="js-masonry-item masonry__item col-xs-3 col-lg-3">
-									<a><img src="../assets/media/photo_album/20.jpg" class="img-fluid"></a>
+								<div>
+									<div id="lyrics-container">
+										<div id="lyrics"></div>
+									</div>
 								</div>
 							</div>
 						</section>
 
 						<section id="about" class="js-section section d-none">
-							<h1>Meet <br/>February <br/>Bank</h1>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipisciing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetuer adipisciing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetuer adipisciing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+							<h1>Meet <br/><span>February Bank<span></h1>
+							<div id="pages">
+								<div>
+									<p>Over 17 years deep in the game, february bank, has transformed a recreational sport into a valuable occupation. Growing up in the competitive slipstream of California has allowed this passionate Filipino to continually up the ante.</p>
+								</div>
+								<div>
+									<p>Circumnavigating genres, his magnetic package as an entertainer, vocalist and storyteller draws from a rich variety of influences to create a one-of-kind experience.</p>
+									<p>At the cross-section of his various sounds comes a character somewhat reminiscent of Andre 3000 or Kendrick Lamar in musical charisma, whilst the smooth switch ups between singing and rapping call to mind a young Mos Def.</p>
+								</div>
+								<div>
+									<p>Expanding on his craft has led to opportunities for mentoring artists around the globe, which has enabled him to give back to the creative community.</p>
+									<p>february bank currently resides in the Philippines where he has rooted himself in a country where his parents were born as he continues to make music from the heart surrounded by the energy of the Motherland.</p>
+								</div>
+							</div>
+							<div class="controls js-slick-controls" data-ref="pages">
+								<a class="js-control-prev control control-prev control--disabled"><img src="../assets/media/NEXT SYMBOL.png"></a>
+								<a class="js-control-next control control-next"><img src="../assets/media/NEXT SYMBOL.png"></a>
+							</div>
 						</section>
 
+					</div>
+
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<footer id="footer">
+							<ul>
+								<li id="link--youtube"><a href=" https://www.youtube.com/channel/UCgX6SIr75gSOpgqMEzs4GDQ">
+									<img src="../assets/media/icons/YOUTUBE.png">
+								</a></li>
+								<li id="link--twitter"><a href="https://twitter.com/februarybank">
+									<img src="../assets/media/icons/TWITTER.png">
+								</a></li>
+								<li id="link--spotify"><a href="">
+									<img src="../assets/media/icons/SPOTIFY.png">
+								</a></li>
+								<li id="link--soundcloud"><a href=" https://soundcloud.com/februarybank">
+									<img src="../assets/media/icons/SOUNDCLOUD.png">
+								</a></li>
+								<li id="link--instagram"><a href="https://www.instagram.com/februarybank">
+									<img src="../assets/media/icons/INSTAGRAM.png">
+								</a></li>
+								<li id="link--facebook"><a href="https://www.facebook.com/thefebruarybank">
+									<img src="../assets/media/icons/FACEBOOK.png">
+								</a></li>
+								<li id="link--apple-music"><a><img src="../assets/media/icons/APPLE MUSIC.png"></a></li>
+							</ul>
+						</footer>
 					</div>
 				</div>
 			</div>
 
 		</div>
 
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="../assets/js/custom.js"></script>
 
 	</body>
