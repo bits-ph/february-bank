@@ -3,6 +3,8 @@
   src: url('../fonts/DRUK WIDE BOLD.TTF');
 }
 
+* { min-width: 0; min-height: 0; }
+
 * { color: white; font-family: Arial; }
 body { position: relative; background: black; }
 h1,   h2,   h3,   h4,   h5,   h6,
@@ -67,6 +69,7 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 	margin-left: auto;
 	margin-right: auto;
 	height: 100%;
+	display: flex; justify-content: center; align-items: center;
 }
 
 #home {
@@ -75,11 +78,7 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 #home * { font-size: 0; }
 #home img { position: absolute; }
 
-#logo--wordmark {
-	width: 280px;
-	top: calc(50% - (280px / 2));
-	left: calc(50% - (280px / 2));
-}
+#logo--wordmark { width: 280px; }
 
 #about {}
 
