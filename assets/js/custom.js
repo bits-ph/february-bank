@@ -53,6 +53,17 @@ $("a[href*='#']").click(function() {
 		$section.removeClass("d-none");
 		if (sectionId == "#about") { $("#pages").slick("refresh"); }
 		else if (sectionId == "#gallery") { $("#photos").slick("refresh"); }
+		monogramColor = $section.data("monogram-color");
+		if (monogramColor) {
+			var src = $("#logo--monogram").attr("src");
+			src = src.substring(0, src.indexOf("monogram--")) + "monogram--" + monogramColor + ".png";
+			$("#logo--monogram").attr("src", src)
+		}
+		else {
+			var src = $("#logo--monogram").attr("src");
+			src = src.substring(0, src.indexOf("monogram--")) + "monogram--blue.png";
+			$("#logo--monogram").attr("src", src)
+		}
 	}
 });
 
