@@ -53,6 +53,7 @@ $("a[href*='#']").click(function() {
 		$section.removeClass("d-none");
 		if (sectionId == "#about") { $("#pages").slick("refresh"); }
 		else if (sectionId == "#gallery") { $("#photos").slick("refresh"); }
+
 		monogramColor = $section.data("monogram-color");
 		if (monogramColor) {
 			var src = $("#logo--monogram").attr("src");
@@ -63,6 +64,18 @@ $("a[href*='#']").click(function() {
 			var src = $("#logo--monogram").attr("src");
 			src = src.substring(0, src.indexOf("monogram--")) + "monogram--blue.png";
 			$("#logo--monogram").attr("src", src)
+		}
+
+		linkColor = $section.data("link-color");
+		if (linkColor) {
+			var src = $("#link--new img").attr("src");
+			src = src.substring(0, src.indexOf("NEWSHT-[")) + "NEWSHT-[" + linkColor + "].gif";
+			$("#link--new img").attr("src", src)
+		}
+		else {
+			var src = $("#link--new img").attr("src");
+			src = src.substring(0, src.indexOf("NEWSHT-[")) + "NEWSHT-[coral].gif";
+			$("#link--new img").attr("src", src)
 		}
 	}
 });
