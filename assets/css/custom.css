@@ -12,6 +12,7 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 	font-family: Druk Wide;
 	text-transform: uppercase;
 }
+p { letter-spacing: 0.4px; }
 
 #videoBG { position: relative; z-index: -1; }
 #overlay { position: fixed; z-index: 0; height: 100%; width: 100%; background: black; opacity: 0.5; }
