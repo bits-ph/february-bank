@@ -188,5 +188,11 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 #footer ul > li { display: inline-block; }
 #footer ul > li img { width: 44px; height: 44px; }
 #footer ul > li img.img--active { display: none; }
-#footer ul > li > a:hover > img.img--active { display: initial; }
-#footer ul > li > a:hover > img.img--active + img:not(.img--active) { display: none; }
+#footer ul > li > a:hover > img.img--active,
+#footer ul > li > a:focus > img.img--active {
+	display: initial;
+}
+#footer ul > li > a:hover > img.img--active + img:not(.img--active),
+#footer ul > li > a:focus > img.img--active + img:not(.img--active) {
+	display: none;
+}
