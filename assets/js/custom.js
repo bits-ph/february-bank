@@ -20,14 +20,15 @@ if (sectionId.length != 0) {
 	$section = $sections.filter(sectionId);
 	if ($section.length > 0) {
 		$("a[href='"+sectionId+"']").addClass("active");
-		$section.removeClass("d-none");
+		$section.css("display", "flex");
 	}
 }
 else {
 	sectionId = "#home";
 	$section = $sections.filter(sectionId);
 	$("a[href='"+sectionId+"']").addClass("active");
-	$section.removeClass("d-none");
+	console.log("goes here");
+	$section.css("display", "flex");
 }
 
 $spotifyPlayer = $("#spotify-player")
@@ -38,19 +39,25 @@ function selectTrack($track) {
 	$lyrics.html($track.html())
 }
 
-$track1 = $("#playlist").children().first();
+$playlist = $("#playlist").children()
+$track1 = $playlist.first();
 selectTrack($track1);
 $track1.addClass("active");
+
+if ($playlist.length <= 1) { $(".js-music-controls").addClass("d-none"); }
 
 $("a[href*='#']").click(function() {
 	event.preventDefault();
 	sectionId = $(this).attr("href");
 	$section = $sections.filter(sectionId)
 	if ($section.length > 0) {
+
 		$sectionLinks.removeClass("active");
 		$(this).addClass("active");
-		$sections.addClass("d-none");
-		$section.removeClass("d-none");
+
+		$sections.filter(":not(" + sectionId + ")").fadeOut();
+		$section.fadeIn();
+
 		if (sectionId == "#about") { $("#pages").slick("refresh"); }
 		else if (sectionId == "#gallery") { $("#photos").slick("refresh"); }
 
