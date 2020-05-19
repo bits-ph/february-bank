@@ -4,13 +4,15 @@ $sections = $(".js-section")
 $("#photos").slick({
 	arrows: false,
 	speed: 0,
-	infinite: false
+	infinite: false,
+	draggable: false
 });
 
 $("#pages").slick({
 	arrows: false,
 	speed: 0,
-	infinite: false
+	infinite: false,
+	draggable: false
 });
 
 
