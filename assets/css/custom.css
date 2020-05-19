@@ -13,6 +13,7 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 	text-transform: uppercase;
 }
 p { letter-spacing: 0.4px; }
+a, a * { cursor: pointer; }
 
 #videoBG { position: relative; z-index: -1; }
 #overlay { position: fixed; z-index: 0; height: 100%; width: 100%; background: black; opacity: 0.5; }
@@ -216,7 +217,7 @@ p { letter-spacing: 0.4px; }
 	opacity: 0.2;
 }
 
-#footer { text-align: center; }
+#footer { text-align: center; cursor: default; }
 #footer ul { list-style: none; margin: 0; padding: 0; }
 #footer ul > li { display: inline-block; }
 #footer ul > li img { width: 44px; height: 44px; }
