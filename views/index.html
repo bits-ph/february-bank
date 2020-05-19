@@ -311,12 +311,18 @@
 						</ol>
 						<div class="row--custom">
 							<div>
-								<div>
-									<div id="spotify-player-container">
-										<iframe id="spotify-player" src="" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+								<div style="text-align: center;">
+									<div id="spotify">
+										<div id="spotify-player-container">
+											<iframe id="spotify-player" src="" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+										</div>
+										<a id="switch--to-apple-music"><img src="../assets/media/music/APMUSIC.png"></a>
 									</div>
-									<div id="apple-music-player-container">
-										<iframe frameborder="0" height="300" style="width: 100%; max-width: 660px; overflow: hidden; background: transparent;" sandbox="allow-same-origin allow-scripts" src="https://embed.music.apple.com/us/album/high-off-life/1513037920"></iframe>
+									<div id="apple-music" style="display: none;">
+										<div id="apple-music-player-container">
+											<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="300" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/high-off-life/1513037920?app=music"></iframe>
+										</div>
+										<a id="switch--to-spotify"><img src="../assets/media/music/SPOTIFY.png"></a>
 									</div>
 									<div class="controls js-music-controls" data-ref="pages">
 										<a class="js-control-prev control control-prev control--disabled"><img src="../assets/media/NEXT SYMBOL.png"></a>

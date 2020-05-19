@@ -132,3 +132,14 @@ $(".js-music-controls a.js-control-prev").click(function() {
 		if ($prev.is(":first-child")) { $control.addClass("control--disabled") }
 	}
 });
+
+$("#switch--to-apple-music").click(function() {
+	$("#spotify").hide();
+	$("#apple-music").show();
+});
+
+
+$("#switch--to-spotify").click(function() {
+	$("#apple-music").hide();
+	$("#spotify").show();
+});
