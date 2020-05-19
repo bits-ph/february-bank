@@ -160,9 +160,14 @@ a, a * { cursor: pointer; }
 	transform: scale(0.8);
 	margin-left: calc(-1 * ((300px * 0.2) / 2));
 	margin-top: calc(-1 * ((80px * 0.2) / 2));
+	background-color: linear-gradient(to bottom, #161616, #060606);
 }
 #apple-music-player-container {
 	margin-bottom: 20px;
+}
+#apple-music-player {
+	background-color: #f8f8fa;
+	border-radius: 16px;
 }
 #switch--to-apple-music img,
 #switch--to-spotify img {
