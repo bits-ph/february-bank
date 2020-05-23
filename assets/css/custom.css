@@ -198,11 +198,11 @@ a, a * { cursor: pointer; }
 	font-size: 9px;
 }
 
-
-
-
-
-
+#link--mail, #link--mail * {
+	font-size: 12px;
+	font-family: Druk Wide;
+}
+#link--mail img { width: 80px; }
 
 
 
