@@ -224,8 +224,13 @@ a, a * { cursor: pointer; }
 	filter: FlipH;
 	-ms-filter: "FlipH";
 }
+.control {
+	opacity: 1.0;
+	transition: opacity 0.2s ease-in-out;
+}
 .control--disabled {
 	opacity: 0.2;
+	transition: opacity 0.2s ease-in-out;
 }
 
 #footer { text-align: center; cursor: default; }

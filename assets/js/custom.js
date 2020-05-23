@@ -1,20 +1,21 @@
 $sectionLinks = $(".js-section-link")
 $sections = $(".js-section")
 
-$("#photos").slick({
-	arrows: false,
-	speed: 0,
-	infinite: false,
-	draggable: false
-});
-
 $("#pages").slick({
+	fade: true,
+	speed: 500,
 	arrows: false,
-	speed: 0,
 	infinite: false,
 	draggable: false
 });
 
+$("#photos").slick({
+	fade: true,
+	speed: 500,
+	arrows: false,
+	infinite: false,
+	draggable: false
+});
 
 sectionId = window.top.location.hash.substr(1);
 if (sectionId.length != 0) {
@@ -89,25 +90,24 @@ $("a[href*='#']").click(function() {
 	}
 });
 
-$(".js-slick-controls a.js-control-next").click(function() {
-	$control = $(this);
-	var refId = $control.parents(".js-slick-controls").data("ref");
+
+
+$(".js-slick-controls").each(function() {
+	var $controls = $(this).find(".js-control");
+	var $controlNext = $controls.filter(".js-control-next");
+	var $controlPrev = $controls.filter(".js-control-prev");
+	var refId = $(this).data("ref");
 	var $ref = $("#"+refId);
-	$ref.slick("slickNext").on("afterChange", function(event, slick, currentSlide, nextSlide){
-		$control.siblings("a.js-control-prev").removeClass("control--disabled");
-		if (slick.currentSlide >= (slick.slideCount - 1)) { $control.addClass("control--disabled"); }
+	$ref.on("beforeChange", function(event, slick, currentSlide, nextSlide){
+		$controls.removeClass("control--disabled");
+		if (nextSlide >= (slick.slideCount - 1)) { $controls.filter(".js-control-next").addClass("control--disabled"); }
+		else if (nextSlide == 0) {                 $controls.filter(".js-control-prev").addClass("control--disabled"); }
 	});
+	$controlNext.click(function() { $ref.slick("slickNext"); });
+	$controlPrev.click(function() { $ref.slick("slickNext"); });
 });
 
-$(".js-slick-controls a.js-control-prev").click(function() {
-	$control = $(this);
-	var refId = $control.parents(".js-slick-controls").data("ref");
-	var $ref = $("#"+refId);
-	$ref.slick("slickPrev").on("afterChange", function(event, slick, currentSlide, nextSlide){
-		$control.siblings("a.js-control-next").removeClass("control--disabled");
-		if (slick.currentSlide == 0) { $control.addClass("control--disabled"); }
-	});
-});
+
 
 $(".js-music-controls a.js-control-next").click(function() {
 	$control = $(this);
