@@ -35,10 +35,12 @@ else {
 }
 
 $spotifyPlayer = $("#spotify-player")
+$appleMusicPlayer = $("#apple-music-player")
 $lyrics = $("#lyrics")
 
 function selectTrack($track) {
-	$spotifyPlayer.attr("src", $track.data("src"));
+	$spotifyPlayer.attr("src", $track.data("src-spotify"));
+	$appleMusicPlayer.attr("src", $track.data("src-apple-music"));
 	$lyrics.html($track.html())
 }
 
