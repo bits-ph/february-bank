@@ -106,7 +106,7 @@ $(".js-slick-controls").each(function() {
 		else if (nextSlide == 0) {                 $controls.filter(".js-control-prev").addClass("control--disabled"); }
 	});
 	$controlNext.click(function() { $ref.slick("slickNext"); });
-	$controlPrev.click(function() { $ref.slick("slickNext"); });
+	$controlPrev.click(function() { $ref.slick("slickPrev"); });
 });
 
 
