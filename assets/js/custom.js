@@ -60,7 +60,7 @@ $("a[href*='#']").click(function() {
 		$sectionLinks.removeClass("active");
 		$(this).addClass("active");
 
-		$sections.filter(":not(" + sectionId + ")").fadeOut();
+		$sections.filter(":not(" + sectionId + "):visible").fadeOut();
 		$section.fadeIn();
 
 		if (sectionId == "#about") { $("#pages").slick("refresh"); }
