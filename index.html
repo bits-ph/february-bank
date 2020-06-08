@@ -2,7 +2,7 @@
 	<head>
 		<title>February Bank</title>
 		<meta property="og:image" content="https://thefebruarybank.com/assets/media/og_image.jpg">
-
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
 		<link rel="icon" type="image/png" href="assets/media/favicon.png" />
 		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -12,55 +12,128 @@
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	</head>
-	<body>
-		<div id="videoBG">
+	<body style="background-image: url('assets/media/bg--image.png')">
+		<div id="videoBG" class="d-none d-md-block">
 			<div id="overlay"></div>
 			<video poster="assets/media/bg--image.png" autoplay muted loop>
 			  <source src="assets/media/bg--video.mp4" type="video/mp4">
 			</video>
 		</div>
 
+		<div class="d-md-none">
+			<a href="#home" id="link--back" style="display: none">
+				← Back
+			</a>
+		</div>
+
 		<div id="main-container">
 			<div id="container" class="container">
 
 				<div>
+					
 					<nav id="nav" style="margin-left: auto; margin-right: auto;">
 						<a href="#home"><img src="assets/media/image__logo--monogram--blue.png" id="logo--monogram"></a>
-						<ul>
-							<li><a href="#about" class="js-section-link">
-								<img class="img--active" src="assets/media/links/active/about.png">
-								<img src="assets/media/links/about.png">
-							</a></li>
-							<li><a href="#gallery" class="js-section-link">
-								<img class="img--active" src="assets/media/links/active/gallery.png">
-								<img src="assets/media/links/gallery.png">
-							</a></li>
-							<li><a href="#music" class="js-section-link">
-								<img class="img--active" src="assets/media/links/active/music.png">
-								<img src="assets/media/links/music.png">
-							</a></li>
-							<li><a href="#contact" class="js-section-link">
-								<img class="img--active" src="assets/media/links/active/contact.png">
-								<img src="assets/media/links/contact.png">
-							</a></li>
-							<li><a href="#new" class="js-section-link">
-								<span class="d-none">New Shit</span>
-								<div id="link--new">
-									<img src="assets/media/link--new/NEWSHT-[coral].gif">
-								</div>
-							</a></li>
-						</ul>
+						<div class="d-md-none">
+							<ul class="ul--social">
+								<li id="link--youtube"><a href="https://www.youtube.com/channel/UCgX6SIr75gSOpgqMEzs4GDQ">
+									<img class="img--active" src="assets/media/icons/active/YOUTUBE.png">
+									<img src="assets/media/icons/YOUTUBE.png">
+								</a></li>
+								<li id="link--twitter"><a href="https://twitter.com/februarybank">
+									<img class="img--active" src="assets/media/icons/active/TWITTER.png">
+									<img src="assets/media/icons/TWITTER.png">
+								</a></li>
+								<li id="link--spotify"><a href="https://open.spotify.com/artist/69dHAdz8lUpJir75KFfdlY">
+									<img class="img--active" src="assets/media/icons/active/SPOTIFY.png">
+									<img src="assets/media/icons/SPOTIFY.png">
+								</a></li>
+								<li id="link--soundcloud"><a href="https://soundcloud.com/februarybank">
+									<img class="img--active" src="assets/media/icons/active/SOUNDCLOUD.png">
+									<img src="assets/media/icons/SOUNDCLOUD.png">
+								</a></li>
+								<li id="link--instagram"><a href="https://www.instagram.com/februarybank">
+									<img class="img--active" src="assets/media/icons/active/INSTAGRAM.png">
+									<img src="assets/media/icons/INSTAGRAM.png">
+								</a></li>
+								<li id="link--facebook"><a href="https://www.facebook.com/thefebruarybank">
+									<img class="img--active" src="assets/media/icons/active/FACEBOOK.png">
+									<img src="assets/media/icons/FACEBOOK.png">
+								</a></li>
+								<li id="link--apple-music"><a href="https://music.apple.com/us/artist/february-bank/1508463814">
+									<img class="img--active" src="assets/media/icons/active/APPLE MUSIC.png">
+									<img src="assets/media/icons/APPLE MUSIC.png">
+								</a></li>
+							</ul>
+						</div>
+						<div class="d-none d-md-contents">
+							<ul class="ul--tabs">
+								<li><a href="#about" class="js-section-link">
+									<img class="img--active" src="assets/media/links/active/about.png">
+									<img src="assets/media/links/about.png">
+								</a></li>
+								<li><a href="#gallery" class="js-section-link">
+									<img class="img--active" src="assets/media/links/active/gallery.png">
+									<img src="assets/media/links/gallery.png">
+								</a></li>
+								<li><a href="#music" class="js-section-link">
+									<img class="img--active" src="assets/media/links/active/music.png">
+									<img src="assets/media/links/music.png">
+								</a></li>
+								<li><a href="#contact" class="js-section-link">
+									<img class="img--active" src="assets/media/links/active/contact.png">
+									<img src="assets/media/links/contact.png">
+								</a></li>
+								<li><a href="#new" class="js-section-link">
+									<span class="d-none">New Shit</span>
+									<div id="link--new">
+										<img src="assets/media/link--new/NEWSHT-[coral].gif">
+									</div>
+								</a></li>
+							</ul>
+						</div>
 					</nav>
+					
 				</div>
 
 				<div id="content">
 					<section id="home" class="js-section section" style="display: none">
 						<h1 style="display: none;">February Bank</h1>
-						<img src="assets/media/image__logo--wordmark.png" id="logo--wordmark">
+						<div class="d-md-none" style="text-align: center;">
+							<img src="assets/media/image__logo--wordmark.png" id="logo--wordmark">
+							<ul class="ul--tabs">
+								<li><a href="#about" class="js-section-link">
+									<img class="img--active" src="assets/media/links/active/about.png">
+									<img src="assets/media/links/about.png">
+								</a></li>
+								<li><a href="#gallery" class="js-section-link">
+									<img class="img--active" src="assets/media/links/active/gallery.png">
+									<img src="assets/media/links/gallery.png">
+								</a></li>
+								<li><a href="#music" class="js-section-link">
+									<img class="img--active" src="assets/media/links/active/music.png">
+									<img src="assets/media/links/music.png">
+								</a></li>
+								<li><a href="#contact" class="js-section-link">
+									<img class="img--active" src="assets/media/links/active/contact.png">
+									<img src="assets/media/links/contact.png">
+								</a></li>
+								<li><a href="#new" class="js-section-link">
+									<span class="d-none">New Shit</span>
+									<div style="padding: 12px;">
+										<div id="link--new">
+											<img src="assets/media/link--new/NEWSHT-[coral].gif">
+										</div>
+									</div>
+								</a></li>
+							</ul>
+						</div>
+						<div class="d-none d-md-contents">
+							<img src="assets/media/image__logo--wordmark.png" id="logo--wordmark">
+						</div>
 					</section>
 
 					<section id="about" class="js-section section" style="display: none" data-monogram-color="green" data-link-color="purple"><div>
-						<h1>Meet <br/><span>February Bank</span></h1>
+						<div style="text-align: center"><h1>Meet <br/><span>February Bank</span></h1></div>
 						<div>
 							<div id="pages">
 								<div>
@@ -350,18 +423,20 @@
 						</a>
 					</div></section>
 
-					<section id="new" class="js-section section" style="display: none" data-monogram-color="purple" data-link-color="yellow-to-coral"><div>
+					<section id="new" class="js-section section" style="display: none" data-monogram-color="purple" data-link-color="yellow-to-coral"><div style="width: 100%">
 						<h1 class="d-none">New Shit</h1>
 						<a href="https://www.youtube.com/watch?v=NyVjhSlOhyk" id="link--bbr">
-							<img src="assets/media/bbr-gif.gif">
+							<div class="img-cropper img-cropper-square img-cropper-md-reset">
+								<img src="assets/media/bbr-gif.gif">
+							</div>
 						</a>
 					</div></section>
 
 				</div>
 
-				<div>
+				<div class="d-none d-md-contents">
 					<footer id="footer">
-						<ul>
+						<ul class="ul--social">
 							<li id="link--youtube"><a href="https://www.youtube.com/channel/UCgX6SIr75gSOpgqMEzs4GDQ">
 								<img class="img--active" src="assets/media/icons/active/YOUTUBE.png">
 								<img src="assets/media/icons/YOUTUBE.png">

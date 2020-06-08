@@ -63,6 +63,9 @@ $("a[href*='#']").click(function() {
 		$sections.filter(":not(" + sectionId + "):visible").fadeOut();
 		$section.fadeIn();
 
+		if (sectionId != "#home") { $("#link--back").fadeIn(); }
+		else { $("#link--back").fadeOut(); }
+
 		if (sectionId == "#about") { $("#pages").slick("refresh"); }
 		else if (sectionId == "#gallery") { $("#photos").slick("refresh"); }
 
