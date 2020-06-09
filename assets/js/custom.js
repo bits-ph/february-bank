@@ -71,8 +71,8 @@ $("a[href*='#']").click(function() {
 
 		monogramColor = $section.data("monogram-color");
 		if (monogramColor) {
-			var src = $("#logo--monogram").attr("src");
-			src = src.substring(0, src.indexOf("monogram--")) + "monogram--" + monogramColor + ".png";
+			var src = $(`.monogram.${monogramColor}`).attr("src");
+			// src = src.substring(0, src.indexOf("monogram--")) + "monogram--" + monogramColor + ".png";
 			$("#logo--monogram").attr("src", src)
 		}
 		else {
