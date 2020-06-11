@@ -115,7 +115,7 @@ ul.ul--tabs > li > a.active > img.img--active + img:not(.img--active) { display:
 	min-height: 420px;
 
 	position: relative;
-    max-width: 320px;
+    max-width: 240px; /* was: 265px */
     margin-left: auto;
     margin-right: auto;
 }
@@ -324,9 +324,16 @@ ul.ul--tabs > li > a.active > img.img--active + img:not(.img--active) { display:
 }
 
 #link--mail, #link--mail * {
-	font-size: 12px;
+	font-size: 10.5px;
 	font-family: Druk Wide;
 }
+
+@media (min-width: 768px) {
+	#link--mail, #link--mail * {
+		font-size: 12px;
+	}
+}
+
 #link--mail img { width: 80px; }
 
 .img-cropper {
@@ -347,7 +354,7 @@ ul.ul--tabs > li > a.active > img.img--active + img:not(.img--active) { display:
 
 #link--bbr .img-cropper {
 	width: 100%;
-	max-width: 265px;
+	max-width: 240px;
 }
 
 #link--bbr .img-cropper-square img {
