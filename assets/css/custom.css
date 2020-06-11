@@ -197,8 +197,8 @@ ul.ul--tabs > li > a.active > img.img--active + img:not(.img--active) { display:
 }
 #about p {
 	text-transform: uppercase;
-	font-size: 9.6px;
-	line-height: 16px;
+	font-size: 9.2px;
+	line-height: 15.4px;
 }
 
 @media (min-width: 768px) {
