@@ -30,7 +30,6 @@ else {
 	sectionId = "#home";
 	$section = $sections.filter(sectionId);
 	$("a[href='"+sectionId+"']").addClass("active");
-	console.log("goes here");
 	$section.css("display", "flex");
 }
 
