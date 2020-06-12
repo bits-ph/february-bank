@@ -417,10 +417,6 @@ a.press-item:hover * {
 
 .press-item__meta { color: gray; }
 
-.mention {
-	text-transform: lowercase;
-}
-
 #button--read {
 	width: 100%;
 	max-width: 86.92px;
