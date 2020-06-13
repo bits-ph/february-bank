@@ -368,6 +368,11 @@ ul.ul--tabs > li > a.active > img.img--active + img:not(.img--active) { display:
 	}
 }
 
+#contact a,
+#contact a * {
+	text-decoration: none !important;
+}
+
 #link--mail img { width: 80px; }
 
 a.press-item:hover,
