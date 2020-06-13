@@ -191,6 +191,7 @@ ul.ul--tabs > li > a.active > img.img--active + img:not(.img--active) { display:
 	}
 }
 
+/*
 #about h1 span {
 	background: -webkit-linear-gradient(right, #9685fd, #d65cfb);
 	background: -o-linear-gradient(right, #9685fd, #d65cfb);
@@ -199,6 +200,27 @@ ul.ul--tabs > li > a.active > img.img--active + img:not(.img--active) { display:
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+*/
+
+#text--mention__february { /* L-R #9685fd #be6bfc */
+	background: -webkit-linear-gradient(right, #9685fd, #be6bfc);
+	background: -o-linear-gradient(right, #9685fd, #be6bfc);
+	background: -moz-linear-gradient(right, #9685fd, #be6bfc);
+	background: linear-gradient(to right, #9685fd, #be6bfc); 
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#text--mention__bank { /* L-R #c069fc #d65cfb */
+	background: -webkit-linear-gradient(right, #c069fc, #d65cfb);
+	background: -o-linear-gradient(right, #c069fc, #d65cfb);
+	background: -moz-linear-gradient(right, #c069fc, #d65cfb);
+	background: linear-gradient(to right, #c069fc, #d65cfb); 
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
 #about p {
 	text-transform: uppercase;
 	font-size: 9.2px;
