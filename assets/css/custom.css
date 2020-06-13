@@ -370,6 +370,42 @@ ul.ul--tabs > li > a.active > img.img--active + img:not(.img--active) { display:
 
 #link--mail img { width: 80px; }
 
+a.press-item:hover,
+a.press-item:hover * {
+	text-decoration: none;
+}
+
+#logo--adobo {
+	display: inline-block;
+	max-width: 240px;
+	margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+	#logo--adobo {
+		display: inline-block;
+		max-width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.press-item__content { margin-bottom: 30px; }
+
+.press-item__headline, .press-item__meta {
+	text-transform: uppercase;
+	font-size: 11.52px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.press-item__meta { color: gray; }
+
+#button--read {
+	width: 100%;
+	max-width: 86.92px;
+}
+
 .img-cropper {
 	overflow: hidden;
 	position: relative;
@@ -415,43 +451,6 @@ ul.ul--tabs > li > a.active > img.img--active + img:not(.img--active) { display:
 		max-width: 100%;
 	}
 }
-
-a.press-item:hover,
-a.press-item:hover * {
-	text-decoration: none;
-}
-
-#logo--adobo {
-	display: inline-block;
-	max-width: 240px;
-	margin-bottom: 20px;
-}
-
-@media (min-width: 768px) {
-	#logo--adobo {
-		display: inline-block;
-		max-width: 300px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-
-.press-item__content { margin-bottom: 30px; }
-
-.press-item__headline, .press-item__meta {
-	text-transform: uppercase;
-	font-size: 11.52px;
-	font-weight: bold;
-	letter-spacing: 2px;
-}
-
-.press-item__meta { color: gray; }
-
-#button--read {
-	width: 100%;
-	max-width: 86.92px;
-}
-
 
 .controls {
 	text-align: center;
