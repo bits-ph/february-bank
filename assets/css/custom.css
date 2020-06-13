@@ -234,12 +234,20 @@ ul.ul--tabs > li > a.active > img.img--active + img:not(.img--active) { display:
 	}
 }
 
+.slick-slide,
+.slick-slide * {
+	outline: none !important;
+}
+
 #pages div,
 #pages p {
 	display: block;
 }
 #pages .slick-track { display: flex !important; }
-#pages .slick-slide { height: inherit !important; display: flex !important; }
+#pages .slick-slide {
+	height: inherit !important;
+	display: flex !important;
+}
 
 #pages.slick-slider {
   -webkit-user-select: text;
