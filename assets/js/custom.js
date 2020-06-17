@@ -17,6 +17,15 @@ $("#photos").slick({
 	draggable: false
 });
 
+$("#articles").slick({
+	fade: true,
+	speed: 500,
+	arrows: false,
+	infinite: false,
+	draggable: false
+});
+
+
 sectionId = window.top.location.hash.substr(1);
 if (sectionId.length != 0) {
 	sectionId = "#"+sectionId;
@@ -67,6 +76,7 @@ $("a[href*='#']").click(function() {
 
 		if (sectionId == "#about") { $("#pages").slick("refresh"); }
 		else if (sectionId == "#gallery") { $("#photos").slick("refresh"); }
+		else if (sectionId == "#press") { $("#articles").slick("refresh"); }
 
 		monogramColor = $section.data("monogram-color");
 		if (monogramColor) {
