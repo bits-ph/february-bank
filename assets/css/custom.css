@@ -396,8 +396,20 @@ a.press-item:hover * {
 	margin-bottom: 20px;
 }
 
+#logo--adobo {
+	display: inline-block;
+	max-width: 240px;
+	margin-bottom: 20px;
+}
+
 @media (min-width: 768px) {
-	#logo--adobo {
+	#logo--garage {
+		display: inline-block;
+		max-width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#logo--garage {
 		display: inline-block;
 		max-width: 300px;
 		margin-left: auto;
