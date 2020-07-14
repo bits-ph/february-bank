@@ -333,6 +333,10 @@ ul.ul--tabs > li > a.active > img.img--active + img:not(.img--active) { display:
 	height: 18px;
 }
 
+#music .controls {
+	margin-top: 20px;
+}
+
 #lyrics-container {
 	height: 180px;
 	overflow-y: auto;
@@ -409,7 +413,7 @@ a.press-item:hover * {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	
+
 	#logo--garage {
 		display: inline-block;
 		max-width: 300px;
